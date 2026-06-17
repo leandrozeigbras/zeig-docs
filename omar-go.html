@@ -61,8 +61,21 @@
   <p>Pegar acesso no dia do deploy = a gente descobre problema na sua frente. Com acesso antes, a gente <b>testa e garante</b>:</p>
   <div class="todo"><input type="checkbox" data-k="o1"><div>Acesso ao <b>código do 2º ERP</b> (produção/fábrica) — sem ele, esse ERP fica de fora do deploy<div class="pz">crítico · até quarta</div></div></div>
   <div class="todo"><input type="checkbox" data-k="o2"><div>Acesso ao <b>painel Netlify</b> (ver o uso real dos 75% + preparar o rollback)<div class="pz">até quarta</div></div></div>
-  <div class="todo"><input type="checkbox" data-k="o3"><div>Criar o <b>app de API do TikTok Shop</b> (Partner Center → App Key/Secret) — é o que liga a automação do TikTok. ⚠️ NÃO é o login/senha do portal<div class="pz">pode ser p/ julho</div></div></div>
+  <div class="todo"><input type="checkbox" data-k="o3"><div>Criar o <b>app de API do TikTok Shop</b> (Partner Center → App Key/Secret) — liga a automação do TikTok. ⚠️ NÃO é o login/senha do portal<div class="pz">pode ser p/ julho</div></div></div>
   <div class="todo"><input type="checkbox" data-k="o4"><div>Confirmar acesso ao <b>Bling</b> e ao <b>banco de produção</b> (p/ backup e validar os 67 pedidos)<div class="pz">até quinta</div></div></div>
+</div>
+
+<div class="card" style="border:2px solid var(--ok)">
+  <h2>✅ Como me dar acesso (do jeito certo)</h2>
+  <div class="win"><b>Regra de ouro:</b> sempre como <b>COLABORADOR / convidado</b> com o e-mail <b>leandrozeigbras@gmail.com</b> — <u>nunca</u> a senha da sua conta. Assim você mantém o controle, vê quem fez o quê, e revoga quando quiser. (Exatamente como já fizemos no GitHub.)</div>
+  <table>
+    <tr><th>Plataforma</th><th>Como fazer</th></tr>
+    <tr><td><b>Netlify</b></td><td>Sim, igual o GitHub! Team → <b>Members</b> → <b>Invite</b> → leandrozeigbras@gmail.com. Não precisa da sua conta/senha.</td></tr>
+    <tr><td><b>GitHub</b> (2º ERP)</td><td>No repositório → Settings → <b>Collaborators</b> → adicionar leandrozeigbras</td></tr>
+    <tr><td><b>Firebase</b> (banco produção)</td><td>Console → ⚙️ → Usuários e permissões → <b>Adicionar membro</b> → leandrozeigbras@gmail.com (papel Editor)</td></tr>
+    <tr><td><b>TikTok</b></td><td>Não é colaborador — você cria o app e me passa só a <b>App Key/Secret</b> (chaves de API)</td></tr>
+  </table>
+  <p style="margin-top:8px;font-size:13.5px"><b>Resposta direta à sua dúvida:</b> colaborador, sim. Não compartilhe sua senha/conta de jeito nenhum — não é necessário e é mais seguro assim.</p>
 </div>
 
 <div class="card">
