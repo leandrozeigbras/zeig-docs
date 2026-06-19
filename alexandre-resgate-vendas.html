@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEIG · Resgate de Vendas ML — Alexandre</title>
+<style>
+  :root{--denim:#1e3a5f;--indigo:#27418f;--claro:#eef2fa;--ok:#1a7f4e;--alerta:#b3261e;--areia:#f7f6f2;--amar:#b26a00}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--areia);color:#1c1c1e;font-size:16px;line-height:1.5}
+  .wrap{max-width:660px;margin:0 auto;padding:14px 12px 60px}
+  header{background:linear-gradient(135deg,var(--denim),var(--indigo));color:#fff;border-radius:14px;padding:20px 16px;margin-bottom:12px}
+  header .marca{font-weight:800;letter-spacing:3px;font-size:12px;opacity:.85}
+  header h1{font-size:20px;margin-top:6px}header p{font-size:12.5px;opacity:.85;margin-top:6px}
+  .prog{background:#fff;border:1px solid #e4e2da;border-radius:12px;padding:12px 15px;margin-bottom:12px}
+  .prog .barra{height:9px;background:#e8e6df;border-radius:99px;overflow:hidden;margin-top:6px}
+  .prog .fill{height:100%;background:linear-gradient(90deg,var(--indigo),var(--ok));width:0%;transition:width .4s}
+  .card{background:#fff;border:1px solid #e4e2da;border-radius:12px;padding:15px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  h2{font-size:16px;color:var(--denim);margin-bottom:9px}
+  h3{font-size:13px;color:var(--amar);margin:12px 0 5px;font-weight:800}
+  p{margin-bottom:7px;font-size:14.5px}
+  .kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:6px 0}
+  .kpi{background:var(--claro);border-radius:9px;padding:9px 6px;text-align:center}
+  .kpi .v{font-size:17px;font-weight:800;color:var(--indigo)}
+  .kpi .l{font-size:9.5px;color:#666;text-transform:uppercase;margin-top:2px}
+  .sel{display:inline-block;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:800;color:#fff}
+  .urg{background:var(--alerta)}.alt{background:var(--amar)}.med{background:var(--indigo)}
+  .item{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #f0efe9}
+  .item:last-child{border-bottom:0}.item input{width:21px;height:21px;accent-color:var(--indigo);flex-shrink:0;margin-top:2px}
+  .item .tx{flex:1;font-size:14px}
+  .alert{border-left:4px solid var(--alerta);background:#fff5f4;padding:10px 12px;border-radius:8px;margin:8px 0;font-size:13.5px}
+  .win{border-left:4px solid var(--ok);background:#f1faf4;padding:10px 12px;border-radius:8px;margin:8px 0;font-size:13.5px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin:6px 0}
+  th,td{padding:6px 5px;border-bottom:1px solid #eee;text-align:left}th{color:#777;font-size:10px;text-transform:uppercase}
+  td.r{text-align:right;font-weight:700}
+  footer{text-align:center;font-size:11.5px;color:#999;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="marca">ZEIG · DENIM</div>
+  <h1>Plano de Resgate de Vendas — Mercado Livre</h1>
+  <p>Para: <b>Alexandre</b> · diagnóstico + passo a passo · Junho/2026</p>
+</header>
+
+<div class="prog">
+  <div style="font-size:13px"><b>Seu progresso no resgate</b> · <span id="ptxt">0%</span></div>
+  <div class="barra"><div class="fill" id="pfill"></div></div>
+</div>
+
+<div class="card">
+  <h2>📉 O que os números dizem (últimos 30 dias)</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">49.242</div><div class="l">impressões</div></div>
+    <div class="kpi"><div class="v">243</div><div class="l">cliques</div></div>
+    <div class="kpi"><div class="v">0,49%</div><div class="l">CTR (clique)</div></div>
+    <div class="kpi"><div class="v">10</div><div class="l">vendas do ads</div></div>
+    <div class="kpi"><div class="v">34</div><div class="l">vendas orgânicas</div></div>
+    <div class="kpi"><div class="v">4,27</div><div class="l">ROAS (meta 5)</div></div>
+  </div>
+  <div class="alert"><b>O funil está furado em 3 pontos:</b> muita gente VÊ (49 mil), pouca CLICA (0,49%), e pouca COMPRA. Anúncio aparece, mas a vitrine não atrai e a página não fecha.</div>
+</div>
+
+<div class="card">
+  <h2>🔎 Por que caiu — causa raiz (na ordem do impacto)</h2>
+  <h3>1. 🔴 Reputação VERDE-CLARO (o maior vilão)</h3>
+  <p>A reclamação da devolução derrubou a cor pra verde-claro. No ML, a cor mexe <b>direto</b> na exposição orgânica E na confiança de quem vê. Comprador olha "verde-claro" e hesita. <b>Isso explica a queda do orgânico (34 vendas, mas em queda) mais que a publicidade.</b></p>
+  <h3>2. 🟠 CTR baixo — a vitrine não faz clicar</h3>
+  <table>
+    <tr><th>Anúncio</th><th>Impr.</th><th>Cliques</th><th>CTR</th></tr>
+    <tr><td>Azul</td><td class="r">1.543</td><td class="r">9</td><td class="r">0,58%</td></tr>
+    <tr><td>Preta</td><td class="r">2.946</td><td class="r">9</td><td class="r">0,31%</td></tr>
+    <tr><td>Azul Escuro</td><td class="r">3.031</td><td class="r">7</td><td class="r">0,23%</td></tr>
+    <tr><td>Preta (2)</td><td class="r">4.209</td><td class="r">5</td><td class="r">0,12%</td></tr>
+  </table>
+  <p>Bom no ML moda é <b>~1% ou mais</b>. Vários estão em 0,1–0,3% → foto/título/preço não chamam.</p>
+  <h3>3. 🟠 Conversão baixa — a página não fecha</h3>
+  <p>Quem clica não compra (vários anúncios com 0 venda atribuída). Causas típicas: frete caro, falta tabela de medidas, ficha técnica incompleta, poucas fotos.</p>
+  <h3>4. 🟡 Orçamento diluído</h3>
+  <p>R$ 35/dia espalhado em 14 anúncios = ~R$ 2,50 cada. Pouco pra qualquer um decolar.</p>
+</div>
+
+<div class="card">
+  <h2>🚑 AÇÃO 1 — Recuperar a reputação <span class="sel urg">URGENTE</span></h2>
+  <div class="item"><input type="checkbox" data-k="r1"><div class="tx">No ML → Reputação → <b>"Solicitar revisão"</b> da reclamação da devolução (a do caso da calça azul claro). O ML às vezes remove do índice.</div></div>
+  <div class="item"><input type="checkbox" data-k="r2"><div class="tx">Responder <b>toda pergunta em menos de 1h</b> (tempo de resposta conta na reputação)</div></div>
+  <div class="item"><input type="checkbox" data-k="r3"><div class="tx">Garantir <b>envio no prazo</b> (Flex/Amaral) — atraso vira "envio incorreto"</div></div>
+  <div class="item"><input type="checkbox" data-k="r4"><div class="tx">Meta: <b>15 vendas limpas seguidas</b> sem reclamação → volta ao verde</div></div>
+  <div class="win">Sem resolver a cor, todo o resto rende menos. É a alavanca nº 1.</div>
+</div>
+
+<div class="card">
+  <h2>🖼️ AÇÃO 2 — Fazer CLICAR (anúncios) <span class="sel alt">ALTA</span></h2>
+  <div class="item"><input type="checkbox" data-k="c1"><div class="tx"><b>Foto principal</b>: fundo branco, calça em destaque, alta qualidade. A 1ª foto é a vitrine — é o que decide o clique.</div></div>
+  <div class="item"><input type="checkbox" data-k="c2"><div class="tx"><b>Título</b>: palavra-chave forte no início. Ex.: <i>"Calça Jeans Masculina Tradicional Reta Azul Zeig"</i> (modelo + cor + marca)</div></div>
+  <div class="item"><input type="checkbox" data-k="c3"><div class="tx"><b>Preço</b>: comparar com 3 concorrentes; se estiver acima, ajustar ou justificar (qualidade)</div></div>
+  <div class="item"><input type="checkbox" data-k="c4"><div class="tx"><b>Frete grátis</b> nos campeões (se a margem deixar) — converte muito no ML</div></div>
+</div>
+
+<div class="card">
+  <h2>🛒 AÇÃO 3 — Fazer COMPRAR (página) <span class="sel alt">ALTA</span></h2>
+  <div class="item"><input type="checkbox" data-k="p1"><div class="tx"><b>Tabela de medidas</b> em foto (cintura/quadril/comprimento por tamanho) → mais conversão e <b>menos devolução</b></div></div>
+  <div class="item"><input type="checkbox" data-k="p2"><div class="tx"><b>Ficha técnica 100%</b> preenchida (tecido, modelagem, cor, composição) → ML rankeia melhor</div></div>
+  <div class="item"><input type="checkbox" data-k="p3"><div class="tx"><b>4+ fotos</b>: frente, costas, detalhe do tecido, vestida (modelo)</div></div>
+  <div class="item"><input type="checkbox" data-k="p4"><div class="tx">Deixar <b>troca/garantia</b> clara na descrição (reduz medo de comprar)</div></div>
+</div>
+
+<div class="card">
+  <h2>🎯 AÇÃO 4 — Otimizar a campanha <span class="sel med">MÉDIA</span></h2>
+  <div class="item"><input type="checkbox" data-k="a1"><div class="tx"><b>Pausar</b> anúncios com muitos cliques e <b>0 venda</b> (estão queimando dinheiro)</div></div>
+  <div class="item"><input type="checkbox" data-k="a2"><div class="tx"><b>Concentrar</b> o orçamento nos 3–4 que mais vendem (em vez de espalhar em 14)</div></div>
+  <div class="item"><input type="checkbox" data-k="a3"><div class="tx">Testar <b>ROAS objetivo 4x</b> por 1 semana (a meta 5x pode estar limitando a exposição)</div></div>
+  <div class="item"><input type="checkbox" data-k="a4"><div class="tx">Subir o lance nos campeões e acompanhar ACOS (hoje 23%)</div></div>
+</div>
+
+<div class="card">
+  <h2>📈 AÇÃO 5 — Escalar de novo <span class="sel med">MÉDIA</span></h2>
+  <div class="item"><input type="checkbox" data-k="e1"><div class="tx">Publicar os <b>KITS</b> (2/3/4 peças) — ticket médio maior, já está pronto no ERP</div></div>
+  <div class="item"><input type="checkbox" data-k="e2"><div class="tx"><b>Variações de tamanho</b> completas em cada anúncio (não perder venda por falta de número)</div></div>
+  <div class="item"><input type="checkbox" data-k="e3"><div class="tx"><b>Não depender só do ML</b>: reforçar TikTok, Shopee e e-commerce próprio (diversificar o risco)</div></div>
+</div>
+
+<div class="win" style="margin:14px 0">🥷 <b>Ordem de ataque:</b> primeiro a reputação (Ação 1), em paralelo as fotos/títulos (Ação 2 e 3). Campanha e escala (4 e 5) depois que o funil parar de vazar. Uma coisa de cada vez, medindo.</div>
+
+<footer>ZEIG · plano de resgate · marque conforme executar · progresso salvo no aparelho</footer>
+</div>
+<script>
+var t=document.querySelectorAll('input[type=checkbox][data-k]');
+function up(){var n=t.length,f=0;t.forEach(c=>{if(c.checked)f++;});var p=n?Math.round(100*f/n):0;document.getElementById('ptxt').textContent=p+"% ("+f+"/"+n+")";document.getElementById('pfill').style.width=p+"%";}
+t.forEach(c=>{var k='zeig-rv-'+c.dataset.k;c.checked=localStorage.getItem(k)==='1';c.addEventListener('change',()=>{localStorage.setItem(k,c.checked?'1':'0');up();});});up();
+</script>
+</body>
+</html>
